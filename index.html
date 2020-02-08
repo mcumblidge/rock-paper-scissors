@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+let playerChoice=null;
+let computerChoice=null;
+let playerScore=0;
+let computerScore=0;
+
+const RPS=["Rock","Paper","Scissors"];
+
+
+while(playerScore<5 || computerScore<5){
+//user selects its weapon
+function playerSelection(){
+    playerChoice=prompt("Select Rock, Paper, or Scissors: ");
+}
+
+//computer select its choice
+function computerSelection() {
+    computerChoice=RPS[Math.floor(Math.random() * RPS.length)];
+}
+
+//plays a round of Rock, Paper, Scissors
+function playRound(){
+
+    playerSelection();
+    computerSelection();
+    alert("You selected "+playerChoice+", and the computer selected "+computerChoice+".");
+    playerScore++;
+}
+
+}
+
+</script>
+</body>
+</html>
